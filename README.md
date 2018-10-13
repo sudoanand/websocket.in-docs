@@ -1,5 +1,5 @@
 # WebSocket.in Docs
-The open and free WebSocket server for all.
+The open and free WebSocket server for all!
 Ready to use WebSocket server for all your bi-direction data transmission usage.
 
 ##  It's ready to use
