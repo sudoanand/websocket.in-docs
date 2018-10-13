@@ -1,0 +1,6 @@
+private void start() {
+    Request request = new Request.Builder().url("{% include socket_url.html %}").build();
+    EchoWebSocketListener listener = new EchoWebSocketListener();
+    WebSocket ws = client.newWebSocket(request, listener);
+    client.dispatcher().executorService().shutdown();
+}

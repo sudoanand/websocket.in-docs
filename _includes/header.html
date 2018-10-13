@@ -1,0 +1,18 @@
+<header class="header {{ include.textdecor }}">
+    <div class="container">
+        <div class="branding">
+            <a href="{{ '/' | relative_url }}" style="text-decoration: none;">
+                <h1 class="logo">
+                    <span aria-hidden="true" class="icon_globe-2 icon"></span>
+                    <span class="text-highlight">WebSocket</span><span class="text-bold">.in</span>
+                </h1>
+            </a>
+        </div><!--//branding-->
+        <div class="tagline">
+            <p>The open and free WebSocket server for all.</p>
+            {% if(include.show_description) %}
+            <p>Ready to use WebSocket server for all your bi-direction data transmission usage.</p>	
+            {% endif %}
+        </div><!--//tagline-->
+    </div><!--//container-->
+</header><!--//header-->

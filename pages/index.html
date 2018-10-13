@@ -1,0 +1,61 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+permalink: /
+
+class: landing-page
+---  
+	    <div class="page-wrapper">
+        
+            {% include header.html textdecor="text-center" show_description=true%}
+
+            <section class="cards-section text-center">
+                <div class="container">
+                    <h2 class="title">It's ready to use!</h2>
+                    <div class="intro">
+                        <p>Whether you are building a WebRTC app and need signaling server, a chat room or a file transfer software, you can get going with Websocket.in.</p>
+                        
+                        <p>Here you go, replace channel_id and room_id with your own (<a href="{{ 'docs' | relative_url }}">view quick-start</a>):</p>
+                        <pre style="background-color: #2f2f2f;color:#fff;padding: 10px;">{% include socket_url.html %}</pre>                 
+                       <!--//cta-container-->
+                    </div><!--//intro-->
+                    <div id="cards-wrapper" class="cards-wrapper row">
+                        <div class="item item-green col-lg-4 col-md-6 col-sm-12">
+                            <div class="item-inner">
+                                <div class="icon-holder">
+                                    <i class="icon fa fa-paper-plane"></i>
+                                </div><!--//icon-holder-->
+                                <h3 class="title">Quick Start</h3>
+                                <p class="intro">Basic information to get you started with WebSocket.in.</p>
+                                <a class="link" href="{{ 'docs' | relative_url }}"><span></span></a>
+                            </div><!--//item-inner-->
+                        </div><!--//item-->
+                        <div class="item item-pink item-2 col-lg-4 col-md-6 col-sm-12">
+                            <div class="item-inner">
+                                <div class="icon-holder">
+                                    <span aria-hidden="true" class="icon icon_genius"></span>
+                                </div><!--//icon-holder-->
+                                <h3 class="title">Code samples</h3>
+                                <p class="intro">Code samples and demo usage help better.</p>
+                                <a class="link" href="{{ 'docs#code-section' | relative_url }}"><span></span></a>
+                            </div><!--//item-inner-->
+                        </div><!--//item-->
+                        <div class="item item-blue col-lg-4 col-md-6 col-sm-12">
+                            <div class="item-inner">
+                                <div class="icon-holder">
+                                    <span aria-hidden="true" class="icon icon_lifesaver"></span>
+                                </div><!--//icon-holder-->
+                                <h3 class="title">FAQ</h3>
+                                <p class="intro">Learn more about the project and its features.</p>
+                                <a class="link" href="{{ 'docs#faq-section' | relative_url }}"><span></span></a>
+                            </div><!--//item-inner-->
+                        </div><!--//item-->                    
+                    </div><!--//cards-->
+                </div><!--//container-->
+            </section><!--//cards-section-->
+    </div><!--//page-wrapper-->
+         
+    {%- include  footer.html -%}      
+	{%- include  scripts.html -%}      

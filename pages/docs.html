@@ -1,0 +1,184 @@
+---
+layout: home
+permalink: /docs/
+---
+<div class="page-wrapper">    
+    {%- include header.html -%}              
+    <div class="doc-wrapper">
+        <div class="container">
+            <div id="doc-header" class="doc-header text-center">
+                <h1 class="doc-title"><i class="icon fa fa-book"></i> Documentation</h1>
+                <div class="meta"><i class="far fa-clock"></i> Last updated: October 10th, 2018</div>
+            </div><!--//doc-header-->
+            <div class="doc-body row">
+                <div class="doc-content col-md-9 col-12 order-1">
+                    <div class="content-inner">
+                        <section id="connect-section" class="doc-section">
+                            <h2 class="section-title">Connect</h2>
+                            <div class="section-block">
+                                <p>WebSocket.in is open WebSocket server, which means you do not need to login or register to get started. If you are having difficulty getting started, have a look at the code samples given below. There is no additional plugin or library installation required in your app to use the WebSocket.in server.
+                                </p>
+
+                                <p>Copy the WebSocket server URL below, replace <b>channel_id</b> and <b>room_id</b> with your own unique identifiers for the channel and a room inside it.
+                                <pre style="background-color: #2f2f2f;color:#fff;padding: 10px;">wss://connect.websocket.in/<b>YOUR_CHANNEL_ID</b>?room_id=<b>YOUR_ROOM_ID</b></pre>
+                                </p>
+
+                                <p>Example of a valid WebSocket url: <code style="background-color: #2f2f2f">wss://connect.websocket.in/hack4mer_in?room_id=1998</code></p>
+                            </div>
+                        </section><!--//doc-section-->
+                        <section id="parameters-section" class="doc-section">
+                            <h2 class="section-title">Parameters</h2>
+                            <div id="channel-id"  class="section-block">
+                                <h3 class="block-title">Channel ID</h3>
+                                <p>Take this as a unique identifier for your app, this remains constant throughout our application no matter how many connections and rooms you need. 
+                                </p>
+                                <p>Choosing a channel_id:</p>
+                                <ul>
+                                    <li>A channel_id can be alphanumeric and may contain these special characters: - (hyphen), _ (underscore)</li>
+                                    <li>Min. characters required for channel_id=2 , Max. characters allowed for channel_id = 20</li>
+                                    <li>Choose a unique channel id and avoid using common channel ids likes "mychannel", "channelx" etc. Otherwise, your channel connections may conflict with others trying to use the same channel_id</li>
+                                </ul>
+                            </div><!--//section-block-->
+
+                            <div id="room-id"  class="section-block">
+                                <h3 class="block-title">Room ID</h3>
+                                <p>Room ID is an optional parameter in the WebSocket url, default room_id = 1, if not provided. </p>
+                                <p>Why room_id? While channel_id should be constant throughout your application, room_id may vary depending upon your requirements. When a message is sent by a user, it is passed to only the members of the sender's room.</p>
+
+                                <p>For example: Let's say you are using two WebSocket.in endpoints,
+
+                                <ul>
+                                    <li>A: <b>wss://connect.websocket.in/hack4mer_in?room_id=1998</b></li>
+                                    <li>B: <b>wss://connect.websocket.in/hack4mer_in?room_id=1999</b>.</li>
+                                </ul>
+
+                                Suppose, there are 5 users connected to each room. When a user from room 1998 sends a message, it is recieved by other 4 members of the room 1998 only.</p>
+                                <p>Choosing a room_id:</p>
+                                <ul>
+                                    <li>A room_id can be alphanumeric and may contain these special characters: - (hyphen), _ (underscore)</li>
+                                    <li>Max. characters allowed for room_id = 20</li>                                        
+                                    <li>Change room_id when you want to isolate a group of users for data transmission.</li>
+                                </ul>     
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+                        
+                        <section id="code-section" class="doc-section">
+                            <h2 class="section-title">Code samples</h2>
+                            <div class="section-block">
+                                <p>
+                                    Following code samples demonstrate how to connect to a WebSocket.in server
+                                </p>
+                                
+                            </div><!--//section-block-->
+
+                            <div id="javascript-sample" class="section-block">
+                                
+                              
+                                <div class="code-block">
+                                    <h6>Javascript</h6>
+                                    <pre><code class="language-javascript">{% include codesamples/javascript.html %}</code></pre>
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->                           
+                            <div id="android-sample" class="section-block">
+                                
+                              
+                                <div class="code-block">
+                                    <h6>Android/Java</h6>
+                                    <pre><code class="language-javascript">{% include codesamples/android.html %}</code></pre>
+                                    Reference: <a target="_blank" href="https://medium.com/@ssaurel/learn-to-use-websockets-on-android-with-okhttp-ba5f00aea988">https://medium.com/@ssaurel/learn-to-use-websockets-on-android-with-okhttp-ba5f00aea988</a>
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->                             
+                            <div id="ios-sample" class="section-block">
+                                
+                              
+                                <div class="code-block">
+                                    <h6>iOS/Swift</h6>
+                                    <pre><code class="language-javascript">{% include codesamples/ios.html %}</code></pre>
+                                    Reference: <a target="_blank" href="https://www.raywenderlich.com/861-websockets-on-ios-with-starscream">https://www.raywenderlich.com/861-websockets-on-ios-with-starscream</a>
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->                        
+                        </section><!--//doc-section-->
+
+                        <section id="faq-section" class="doc-section">
+                            <h2 class="section-title">Frequently Asked Questions</h2>
+                            
+                               <!--  Question starts -->
+                               <div class="section-block">
+                                    <p>
+                                    <b>is WebSocket.in free?</b>
+                                    </p>
+
+                                    <p>Yes</p>                                        
+                                </div>
+                               <!--  Question ends -->
+
+                               <!--  Question starts -->                                   
+                               <div class="section-block">
+                                    <p>
+                                    <b>How many channels can I use?</b>
+                                    </p>
+
+                                    <p>Currently, we have not placed any limits on the number of channels a person can use. However, we recommend you to use one channel per application.</p>                                        
+                                </div>
+                               <!--  Question ends -->
+
+                               <!--  Question starts -->                                   
+                               <div class="section-block">
+                                    <p>
+                                    <b>How many rooms can a channel have?</b>
+                                    </p>
+
+                                    <p>Unlimited, for now. As WebSocket.in becomes popular we might be required to place some limits on the number of rooms a channel can have due to resource usage and associated costs.</p>                                        
+                                </div>
+                               <!--  Question ends -->
+
+                               <!--  Question starts -->                                   
+                               <div class="section-block">
+                                    <p>
+                                    <b>Can anyone connect to my channel?</b>
+                                    </p>
+
+                                    <p>Yes, anyone can connect to any channel and a room inside it. That's why we recommend using a unique channel_id. <i>This might be possible in near future, for a user to have control on a channel and reserve its access rights.</i></p>                                        
+                                </div>
+                               <!--  Question ends -->
+
+                               <!--  Question starts -->                                   
+                               <div class="section-block">
+                                    <p>
+                                    <b>will WebSocket.in will always be free?</b>
+                                    </p>
+
+                                    <p>Yes! Resource usage and associated costs might force us to launch paid plans in the future when the product matures. However, there will always be a free plan with enough features for you to run your application.</p>                                        
+                                </div>
+                               <!--  Question ends -->
+                        </section>
+                    </div><!--//content-inner-->
+                </div><!--//doc-content-->
+                <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                    <div id="doc-nav" class="doc-nav">
+                        
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#connect-section">Connect</a>
+                                <a class="nav-link scrollto" href="#parameters-section">Parametes</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#channel-id">Channel ID</a>
+                                    <a class="nav-link scrollto" href="#room-id">Room ID</a>
+                                </nav><!--//nav-->
+                                <a class="scrollto" href="#code-section">Code samples</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#javascript-sample">JavaScript</a>
+                                    <a class="nav-link scrollto" href="#android-sample">Android</a>
+                                    <a class="nav-link scrollto" href="#ios-sample">iOS</a>
+                                </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#faq-section">FAQ</a>
+                            </nav><!--//doc-menu-->
+                    </div>
+                </div><!--//doc-sidebar-->
+            </div><!--//doc-body-->              
+        </div><!--//container-->
+    </div><!--//doc-wrapper-->        
+</div><!--//promo-block-->
+    </div><!--//page-wrapper-->
+
+{%- include  footer.html -%}         
+{%- include  scripts.html -%}         
